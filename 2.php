@@ -21,7 +21,7 @@ if (!$conn) {
 echo "Connected successfully";
 
 $sql = 'INSERT INTO osoba (id_osoby , imie, nazwisko, pesel, telefon)
-VALUES ('.$id.','.$imie1.', '.$nazwisko2.', '.$pesel3.','.$telefon4.')';
+VALUES ("'.$id.'","'.$imie1.'", "'.$nazwisko2.'", "'.$pesel3.'","'.$telefon4.'")';
 
 if (mysqli_query($conn, $sql)) {
     echo ("New record created successfully<br>");
