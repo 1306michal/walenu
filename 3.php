@@ -2,7 +2,7 @@
 <body>
 <?PHP
 $servername = "localhost";
-$user = "basia";
+$user = "admin";
 $password = "";
 $database = "bibioteka";
 
@@ -27,26 +27,6 @@ if (mysqli_query($conn, $sql)) {
     echo ("New record created successfully<br>");
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
-
-$sql = "SELECT id_osoby, imie, nazwisko, pesel, telefon FROM osoba";
-$result = mysqli_query($conn, $sql);
-
-if (mysqli_num_rows($result) > 0) {
-    // output data of each row
-    while($row = mysqli_fetch_assoc($result)) {
-        echo ('id:'  . 
-		$row['id_osoby'].
-	' - imie1: ' . $row['imie'].		
-	' - Nazwisko2: ' . $row['nazwisko'].
-	' - pesel:3 ' . $row['pesel'].
-	'- telefon4: ' . $row['telefon']. '<br>');
-    }
-} else {
-    echo "0 results";
-}
-
-mysqli_close($conn);
 
 ?>
 <form>
